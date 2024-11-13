@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Description AI</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+  <h1>Image Description AI</h1>
+</div>
+  
+    <div class="rowcontainer">
+    <form class="form" id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <span class="form-title">Upload your file</span>
+        <p class="form-paragraph">
+            File should be an image
+          </p>
+         <label for="image" class="drop-container">
+        <span class="drop-title">Drop files here</span>
+        or
+        <input type="file" name="image" accept="image/*" required id="file-input">
+    </label>
+        <button type="button" class="submitbtn" onclick="submitForm()">Submit</button>
+      </form>
+
+        <div class="form">
+            <div id="result">
+                <span class="form-title">AI Description:</span>
+                <% if (description) { %>
+                  <p class="generatedtext form-paragraph"><%= description %></p>
+                <% } %>
+                <div id="loader">
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                    <div class="banter-loader__box"></div>
+                  </div>
+              </div>
+        </div>
+      </div>
+
+</div>
+
+
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
